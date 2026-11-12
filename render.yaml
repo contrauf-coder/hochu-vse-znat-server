@@ -1,0 +1,27 @@
+# Описание сервиса для Render (Blueprint): бесплатный веб-сервис на Node во Франкфурте.
+# Значения ключей сюда не пишутся: sync: false — Render спросит их при создании, и они живут только в его настройках.
+services:
+  - type: web
+    name: hochu-vse-znat
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: "true"
+    startCommand: node server.js
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: ALLOWED_ORIGINS
+        value: https://learn.mindmaper.site
+      - key: FIREBASE_SERVICE_ACCOUNT
+        sync: false
+      - key: DEEPSEEK_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: ADMIN_SECRET
+        sync: false
+      - key: LEARN_REGISTER_CODE
+        sync: false

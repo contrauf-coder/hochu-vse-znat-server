@@ -1,0 +1,8 @@
+{
+  "name": "hochu-vse-znat-server",
+  "private": true,
+  "type": "module",
+  "description": "Сервер «Хочу всё знать» (копия на Firebase): тот же learn-worker.js, что на Cloudflare, запущенный на Node для Render",
+  "engines": { "node": ">=20" },
+  "scripts": { "start": "node server.js" }
+}
