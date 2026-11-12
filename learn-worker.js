@@ -321,7 +321,7 @@ const isUnlimited = (username) => !username || UNLIMITED_USERS.has(username);
 const GPT_ANY_PARAMS_USERS = new Set(['admin', 'full']);
 const gptLessonOnly = (username) => !isUnlimited(username) && !GPT_ANY_PARAMS_USERS.has(username);
 const GPT_LESSON_IMAGE = { model: 'gpt-image-2.5-flare', quality: 'low', size: '1024x1024' };
-const GPT_LESSON_SVG = { model: 'gpt-6-luna', effort: 'medium' };
+const GPT_LESSON_SVG = { model: 'gpt-6.1-sol', effort: 'medium' }; // 13.11.2026 по просьбе владельца: было gpt-6-luna
 
 async function readUsage(env, username, fresh = false) {
   const cached = usageCache.get(username);
